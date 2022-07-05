@@ -1,0 +1,15 @@
+.labels {
+  /* max-width: inherit; */
+  /* background-color: blue; */
+  padding: 0.4rem 0.8rem;
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .labels {
+    gap: 0.6rem;
+  }
+}

@@ -1,0 +1,136 @@
+.search-panel {
+  max-width: 120rem;
+
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-panel-inputs {
+  width: 100%;
+  /* margin: 0 2rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-duration,
+.search-guests,
+.search-departure,
+.search-destination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-info {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.search-add {
+  margin-right: 0.4rem;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  background: rgb(255, 31, 124);
+  background: linear-gradient(
+    87deg,
+    rgba(255, 31, 124, 1) 0%,
+    rgba(255, 102, 0, 1) 100%
+  );
+}
+
+.search-count {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+}
+.search-count-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-select {
+  height: 3rem;
+  padding: 0 0.6rem;
+  /* border: none; */
+  /* background-color: none; */
+}
+
+.search-button {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 50rem;
+  color: white;
+  background: rgb(255, 31, 124);
+  background: linear-gradient(
+    87deg,
+    rgba(255, 31, 124, 1) 0%,
+    rgba(255, 102, 0, 1) 100%
+  );
+}
+
+@media screen and (max-width: 1200px) {
+  .search-panel {
+    margin: auto 10rem;
+    flex-direction: column;
+    gap: 3rem;
+    /* align-items: flex-start; */
+  }
+  .search-panel-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.2rem;
+    column-gap: 15rem;
+    justify-content: space-around;
+  }
+  .search-duration,
+  .search-guests,
+  .search-departure,
+  .search-destination {
+    justify-content: space-between;
+  }
+  .search-select {
+    min-width: 18rem;
+  }
+  .search-count-flex {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .search-panel {
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
+  }
+  .search-panel-inputs {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .search-duration,
+  .search-guests,
+  .search-departure,
+  .search-destination {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-select {
+    min-width: 18rem;
+  }
+  .search-count-flex {
+    display: flex;
+  }
+}

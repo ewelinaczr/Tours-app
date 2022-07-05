@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem=10px=62,5% */
+  font-size: 62.5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories {
+  /* background-color: yellow; */
+  height: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.button {
+  height: 3rem;
+  border: none;
+  /* background-color: olivedrab; */
+}
+
+.button:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.description {
+  margin: 0 4rem;
+  /* background-color: red; */
+}

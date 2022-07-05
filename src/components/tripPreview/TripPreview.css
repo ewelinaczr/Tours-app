@@ -1,0 +1,40 @@
+.tour-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.tour-photo {
+  margin: auto;
+}
+
+.tour-image {
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.tour-img {
+  border-radius: 1rem;
+}
+
+.tour-description {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.tour-destination,
+.tour-rating {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.fa-star {
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,18 @@
+.labelBest {
+  font-size: 1rem;
+  color: white;
+  padding: 0.4rem 1rem;
+  /* border-radius: 50rem; */
+  background: linear-gradient(
+    87deg,
+    rgba(175, 235, 41, 1) 0%,
+    rgba(56, 202, 183, 1) 100%
+  );
+}
+
+@media (max-width: 700px) {
+  .labelBest {
+    font-size: 1rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

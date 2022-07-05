@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem=10px=62,5% */
+  font-size: 62.5%;
+}
+
+.button {
+  max-width: 15rem;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50rem;
+  border: none;
+  margin-top: 2rem;
+  background: rgb(255, 31, 124);
+  background: linear-gradient(
+    87deg,
+    rgba(255, 31, 124, 1) 0%,
+    rgba(255, 102, 0, 1) 100%
+  );
+}
