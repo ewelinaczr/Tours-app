@@ -1,15 +1,17 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+.categoryName {
+  font-size: 2.4rem;
+  margin: 3rem auto;
+  //   text-align: right;
+  color: #111;
+  // font-family: "Kaushan Script", cursive;
 }
-
-html {
-	/* 1rem=10px=62,5% */
-	font-size: 62.5%;
-}
-
 .container {
-	/* background-color: palevioletred; */
-	margin: 3rem;
+  /* background-color: palevioletred; */
+  margin: 3rem;
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin: 0rem;
+  }
 }

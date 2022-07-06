@@ -59,17 +59,24 @@ function Info(props) {
         </button>
       </div>
       <div className={styles.description}>
-        {/* <Reviews></Reviews> */}
         <div className={styles.settings}>
-          <div>TURISTS NO: {turistsNo} </div>
-          <button className={styles.turistsbutton} onClick={increaseGuests}>
-            +
-          </button>
-          <button className={styles.turistsbutton} onClick={decreaseGuests}>
-            -
-          </button>
-          <div>BASE PRICE: ${basePrice} /per person </div>
-          <div>TOTAL PRICE: {totalPrice}</div>
+          <div className={styles.turistsno}>
+            <div>
+              TURISTS NO: <span>{turistsNo}</span>{" "}
+            </div>
+            <button className={styles.turistsbutton} onClick={increaseGuests}>
+              +
+            </button>
+            <button className={styles.turistsbutton} onClick={decreaseGuests}>
+              -
+            </button>
+          </div>
+          <div>
+            BASE PRICE: <span>${basePrice}</span> /per person{" "}
+          </div>
+          <div>
+            TOTAL PRICE:<span> ${totalPrice}</span>
+          </div>
         </div>
 
         <GeneralInfo />

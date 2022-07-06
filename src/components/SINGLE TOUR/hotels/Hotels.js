@@ -7,6 +7,7 @@ import NetworkWifiIcon from "@mui/icons-material/NetworkWifi";
 import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import LocalBarIcon from "@mui/icons-material/LocalBar";
+import { AiOutlineStar } from "react-icons/ai";
 // COMPONENTS
 import HotelCard from "./HotelCard";
 
@@ -221,15 +222,16 @@ function Hotels(props) {
   return (
     <Fragment>
       <div className={styles.container} id="hotels">
+        <h1 className={styles.categoryName}>Hotel Description</h1>
         <div className={styles.grid}>
           <div className={styles.description}>
             <div className={styles.maininfo}>
               <div className={styles.cityreviews}>
                 <p>Phuket</p>
-                <p>
-                  <i className="fas fa-regular fa-star fa-4x"></i>
+                <div className={styles.cityreviewsbox}>
+                  <AiOutlineStar size={20} />
                   8.8/10 (750 reviews)
-                </p>
+                </div>
               </div>
               <p className={styles.hotelname}>My Beach Resort</p>
               {/* <p className={styles.tag}>{hotel.tag}</p> */}
@@ -240,7 +242,7 @@ function Hotels(props) {
               </div>
             </div>
             <p className={styles.title}>Facilities</p>
-            <div className={styles.facilirties}>
+            <div className={styles.facilities}>
               <div>
                 <PoolIcon className={styles.facicon} /> Swimming pool
               </div>
@@ -305,17 +307,17 @@ function Hotels(props) {
           <div className={styles.photos}>
             <img
               className={styles.photo}
-              src="https://images.unsplash.com/photo-1520483601560-389dff434fdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              src="https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt="hotel"
             ></img>
             <img
               className={styles.photo}
-              src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=775&q=80"
               alt="hotel"
             ></img>
             <img
               className={styles.photo}
-              src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+              src="https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               alt="hotel"
             ></img>
           </div>

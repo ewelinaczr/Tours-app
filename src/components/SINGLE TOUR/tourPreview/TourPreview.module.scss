@@ -1,18 +1,6 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  /* 1rem=10px=62,5% */
-  font-size: 62.5%;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  /* width: inherit; */
 }
 
 .description {
@@ -26,18 +14,13 @@ html {
   font-size: 30rem;
 }
 .button {
-  /* background-color: red; */
+  // background-color: red;
   margin: 0 4rem;
-  /* padding-right: 10rem; */
-  /* text-align: right; */
   margin-bottom: 3rem;
 }
 .priceblock {
   align-items: center;
   justify-content: center;
-  /* float: right; */
-  /* text-align: right; */
-  /* background-color: yellow; */
   display: flex;
   flex-direction: row;
   gap: 3rem;
@@ -52,4 +35,18 @@ html {
 .totalprice {
   font-size: 2rem;
   font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+    .photos {
+      display: none;
+    }
+    .priceblock {
+      gap: 2rem;
+    }
+  }
 }

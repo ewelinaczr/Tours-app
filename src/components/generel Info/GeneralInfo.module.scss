@@ -1,15 +1,35 @@
+.categoryName {
+  font-size: 2.4rem;
+  margin: 3rem auto;
+  //   text-align: right;
+  color: #111;
+  // font-family: "Kaushan Script", cursive;
+}
 .description {
-	font-size: 1.4rem;
-	text-align: justify;
-	text-justify: inter-word;
+  font-size: 1.4rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .container {
-	font-size: 1.6rem;
-	/* background-color: palevioletred; */
-	margin: 2rem;
+  font-size: 1.6rem;
+  /* background-color: palevioletred; */
+  margin: 2rem;
 }
 
 span {
-	font-weight: 600;
-	font-size: 1.6rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0rem;
+  }
+  .description {
+    font-size: 1.2rem;
+    span {
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+  }
 }

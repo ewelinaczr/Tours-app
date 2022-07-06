@@ -30,7 +30,14 @@ function App() {
       <Error>
         <Suspense
           fallback={
-            <div className="centered">
+            <div
+              style={{
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <LoadingSpinner />
             </div>
           }

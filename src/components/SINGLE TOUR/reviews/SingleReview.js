@@ -1,5 +1,6 @@
 import styles from "./SingleReview.module.scss";
 import ReviewsData from "./../../ReviewsData";
+import { AiOutlineStar } from "react-icons/ai";
 
 console.log(ReviewsData[0]);
 
@@ -12,7 +13,7 @@ function SingleReview(props) {
       <div>
         <p>{props.user}</p>
         <div className={styles.rating}>
-          <i className="fas fa-regular fa-star fa-4x"></i>
+          <AiOutlineStar size={20} style={{ marginRight: "0.6rem" }} />
           <p>{props.rating}</p>
         </div>
       </div>

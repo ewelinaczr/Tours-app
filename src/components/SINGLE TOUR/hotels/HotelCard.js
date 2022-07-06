@@ -35,14 +35,24 @@ function HotelCard(props) {
       <div className={styles.carddetail}>
         <div className={styles.roomtype}>{props.name}</div>
         <div className={styles.roomequip}>
-          <HotelIcon /> One king bed
-          <AcUnitIcon /> Air-conditioning
-          <DryCleaningIcon /> Towels
-          <KitchenIcon /> Refrigerator
-          <SmokeFreeIcon /> Non-smoking
+          <div className={styles.iconsset}>
+            <HotelIcon /> One king bed
+          </div>
+          <div className={styles.iconsset}>
+            <AcUnitIcon /> Air-conditioning
+          </div>
+          <div className={styles.iconsset}>
+            <DryCleaningIcon /> Towels
+          </div>
+          <div className={styles.iconsset}>
+            <KitchenIcon /> Refrigerator
+          </div>
+          <div className={styles.iconsset}>
+            <SmokeFreeIcon /> Non-smoking
+          </div>
         </div>
       </div>
-      <div className={styles.carddetail2}>
+      <div className={styles.carddetail3}>
         <div>{selected && <p className={styles.sellabel}>selected</p>}</div>
         <p className={styles.price}>US$ {props.price}</p>
         <button onClick={addPriceHandler} className={styles.button}>

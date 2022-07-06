@@ -3,6 +3,7 @@ import styles from "./GeneralInfo.module.scss";
 const GeneralInfo = (props) => {
   return (
     <div className={styles.container}>
+      <h1 className={styles.categoryName}>General Informations</h1>
       <div className={styles.description} id="general">
         <span>Phuket</span> is Thailand’s largest island and is the size of
         Singapore, 48 km long and 21 km at the widest part. Phuket lies in the
