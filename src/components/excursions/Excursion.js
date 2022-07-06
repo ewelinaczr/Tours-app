@@ -1,9 +1,11 @@
-import ExcursionsData from "./../ExcursionsData";
-import styles from "./Excursion.module.css";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { useContext, useState } from "react";
-import { TotalPriceContext } from "./../../context/TotalPriceContext/TotalPriceContext";
+// STYLES
+import styles from "./Excursion.module.scss";
+// ICONS
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PersonIcon from "@mui/icons-material/Person";
+// CONTEXT
+import { TotalPriceContext } from "./../../context/TotalPriceContext/TotalPriceContext";
 
 const Excursion = (props) => {
   const [selected, setSelected] = useState(false);

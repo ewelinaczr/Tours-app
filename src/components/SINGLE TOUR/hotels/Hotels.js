@@ -1,19 +1,13 @@
-// import Nav from "../Nav";
-import styles from "./Hotels.module.css";
-import React from "react";
 import { Fragment, useRef, useState } from "react";
-import Reviews from "../reviews/Reviews";
+// STYLES
+import styles from "./Hotels.module.scss";
+// ICONS
 import PoolIcon from "@mui/icons-material/Pool";
 import NetworkWifiIcon from "@mui/icons-material/NetworkWifi";
 import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import LocalBarIcon from "@mui/icons-material/LocalBar";
-import PersonIcon from "@mui/icons-material/Person";
-import HotelIcon from "@mui/icons-material/Hotel";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import DryCleaningIcon from "@mui/icons-material/DryCleaning";
-import KitchenIcon from "@mui/icons-material/Kitchen";
-import SmokeFreeIcon from "@mui/icons-material/SmokeFree";
+// COMPONENTS
 import HotelCard from "./HotelCard";
 
 function Hotels(props) {
@@ -22,7 +16,8 @@ function Hotels(props) {
   const [hotelName, setHotelName] = useState("");
   const [hotelId, setHotelId] = useState("");
   const [hotelPhoto, setHotelPhoto] = useState([]);
-  var hotelId1;
+
+  // var hotelId1;
   // function fetchHotels() {
   // 	const options = {
   // 		method: "GET",

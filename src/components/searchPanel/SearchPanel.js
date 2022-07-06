@@ -1,6 +1,8 @@
-import "./SearchPanel.css";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+// STYLES
+import styles from "./SearchPanel.module.scss";
+// CONTEXT
 import { TotalPriceContext } from "./../../context/TotalPriceContext/TotalPriceContext";
 
 function SearchPanel(props) {
@@ -19,16 +21,6 @@ function SearchPanel(props) {
   const decreaseDuration = () => {
     if (!(countDuration <= 7)) setCountDuration(countDuration - 5);
   };
-
-  // Guests increase/decrease
-  // const [countGuests, setCountGuests] = useState(1);
-  // const increaseGuests = () => {
-  //   if (!(countGuests >= 8)) setCountGuests(countGuests + 1);
-  // };
-  // const decreaseGuests = () => {
-  //   if (!(countGuests <= 1)) setCountGuests(countGuests - 1);
-  // };
-  // setTuristsNo(countGuests);
 
   const departureHandler = (event) => {
     setDeparture(event.target.value);
@@ -59,14 +51,16 @@ function SearchPanel(props) {
     props.onSaveSearch(tourSearch);
   };
 
-  // HTML RENDER
   return (
-    <div onSubmit={submitHandler} className="search-panel">
-      <div className="search-panel-inputs">
+    <div onSubmit={submitHandler} className={styles["search-panel"]}>
+      <div className={styles["search-panel-inputs"]}>
         {/* destination */}
-        <div className="search-destination">
-          <p className="search-info">Destination</p>
-          <select onChange={destinationHandler} className="search-select">
+        <div className={styles["search-destination"]}>
+          <p className={styles["search-info"]}>Destination</p>
+          <select
+            onChange={destinationHandler}
+            className={styles["search-select"]}
+          >
             <option value="Asia">Asia</option>
             <option value="Vietnam">Vietnam</option>
             <option value="Thailand">Thailand</option>
@@ -78,10 +72,10 @@ function SearchPanel(props) {
           </select>
         </div>
         {/* departure */}
-        <div className="search-destination">
-          <p className="search-info">Date</p>
+        <div className={styles["search-destination"]}>
+          <p className={styles["search-info"]}>Date</p>
           <input
-            className="search-select"
+            className={styles["search-select"]}
             type="month"
             min="2022-06"
             max="2022-08"
@@ -89,40 +83,43 @@ function SearchPanel(props) {
           />
         </div>
 
-        <div className="search-departure">
-          <p className="search-info">Departure</p>
-          <select onChange={departureHandler} className="search-select">
+        <div className={styles["search-departure"]}>
+          <p className={styles["search-info"]}>Departure</p>
+          <select
+            onChange={departureHandler}
+            className={styles["search-select"]}
+          >
             <option value="Warsaw">Departure</option>
             <option value="Warsaw">Warsaw</option>
             <option value="Cracow">Cracow</option>
           </select>
         </div>
-        <div className="search-duration">
-          <p className="search-info">Duration</p>
-          <div className="search-count-flex">
-            <p className="search-count">{countDuration}</p>
-            <button onClick={increaseDuration} className="search-add">
+        <div className={styles["search-duration"]}>
+          <p className={styles["search-info"]}>Duration</p>
+          <div className={styles["search-count-flex"]}>
+            <p className={styles["search-count"]}>{countDuration}</p>
+            <button onClick={increaseDuration} className={styles["search-add"]}>
               +
             </button>
-            <button onClick={decreaseDuration} className="search-add">
+            <button onClick={decreaseDuration} className={styles["search-add"]}>
               -
             </button>
           </div>
         </div>
-        <div className="search-guests">
-          <p className="search-info">Guests</p>
-          <div className="search-count-flex">
-            <p className="search-count">{turistsNo}</p>
-            <button onClick={increaseGuests} className="search-add">
+        <div className={styles["search-guests"]}>
+          <p className={styles["search-info"]}>Guests</p>
+          <div className={styles["search-count-flex"]}>
+            <p className={styles["search-count"]}>{turistsNo}</p>
+            <button onClick={increaseGuests} className={styles["search-add"]}>
               +
             </button>
-            <button onClick={decreaseGuests} className="search-add">
+            <button onClick={decreaseGuests} className={styles["search-add"]}>
               -
             </button>
           </div>
         </div>
       </div>
-      <button onClick={submitHandler} className="search-button">
+      <button onClick={submitHandler} className={styles["search-button"]}>
         Search
       </button>
     </div>

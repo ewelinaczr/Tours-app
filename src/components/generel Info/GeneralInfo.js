@@ -1,4 +1,4 @@
-import styles from "./GeneralInfo.module.css";
+import styles from "./GeneralInfo.module.scss";
 
 const GeneralInfo = (props) => {
   return (

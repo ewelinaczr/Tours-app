@@ -28,6 +28,15 @@ function AllTours() {
     setSearchQuery(enteredSearchData);
   };
 
+  // GET FAVOURITE TOURS FROM CONTEXT
+  useEffect(() => {
+    for (let el of likes) {
+      const both = Data.filter((ele) => ele.id === el);
+      favouriteTours.push(...both);
+    }
+    setFavourites(favouriteTours);
+  }, [likes]);
+
   // NAVIGATE TO ROUTES
   const filterLowestPriceHandler = () => {
     navigate("/all-tours?sort=lowest-price");
@@ -62,11 +71,6 @@ function AllTours() {
   };
 
   useEffect(() => {
-    // GET FAVOURITE TOURS FROM CONTEXT
-    for (const [i, el] of likes.entries()) {
-      favouriteTours.push(Data[el]);
-      setFavourites(favouriteTours);
-    }
     // CALL METHODS DEPENDING ON ROUTES
     if (querParams.get("sort") === "best-rated") {
       setSortedData(sortBestRated(Data));
@@ -87,7 +91,7 @@ function AllTours() {
     if (sortedData === undefined || sortedData.length === 0) {
       setNoData(true);
     }
-  }, [searchQuery, params, sortedData, likes]);
+  }, [searchQuery, params, sortedData]);
 
   return (
     <Fragment>

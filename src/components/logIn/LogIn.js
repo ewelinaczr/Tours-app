@@ -1,11 +1,8 @@
 import { Fragment } from "react";
 import styles from "./LogIn.module.scss";
-// import user from "./person.png";
-// import lock from "./lock.png";
 import gg from "./gg.png";
 import fb from "./fb.png";
 import useInput from "../../hooks/useInput";
-// console.log(fb);
 
 const LogIn = (props) => {
   const {

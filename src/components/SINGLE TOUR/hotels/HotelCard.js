@@ -1,11 +1,14 @@
-import styles from "./HotelCard.module.css";
+import { useContext, useState } from "react";
+// STYLES
+import styles from "./HotelCard.module.scss";
+// ICONS
 import PersonIcon from "@mui/icons-material/Person";
 import HotelIcon from "@mui/icons-material/Hotel";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import DryCleaningIcon from "@mui/icons-material/DryCleaning";
 import KitchenIcon from "@mui/icons-material/Kitchen";
 import SmokeFreeIcon from "@mui/icons-material/SmokeFree";
-import { useContext, useState } from "react";
+// CONTEXT
 import { TotalPriceContext } from "./../../../context/TotalPriceContext/TotalPriceContext";
 
 function HotelCard(props) {

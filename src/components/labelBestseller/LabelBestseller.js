@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./LabelBestseller.module.scss";
-// import DataBest from "./../BestsellerPreviewData";
 
 function LabelBestseller() {
   return (

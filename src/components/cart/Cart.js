@@ -1,31 +1,27 @@
-import Modal from "../modal/Modal";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
-import styles from "./Cart.module.css";
-// import mc from "./mc.png";
-// import visa from "./visa.png";
-// import paypal from "./paypal.png";
-// import gpay from "./gpay.png";
-// import card from "./card.png";
+// STYLES
+import styles from "./Cart.module.scss";
+// ICONS
 import { FaCcMastercard } from "react-icons/fa";
 import { FaCcVisa } from "react-icons/fa";
 import { FaCcPaypal } from "react-icons/fa";
 import { FaCcApplePay } from "react-icons/fa";
+// CONTEXT
 import { TotalPriceContext } from "./../../context/TotalPriceContext/TotalPriceContext";
-
-// import { Prompt } from "react-router-dom";
+// COMPONNETS
+import Modal from "../modal/Modal";
 
 const Cart = (props) => {
-  // console.log(turistsNo);
-  // After payment navigate to main page
   const navigate = useNavigate();
   const { turistsNo, totalPrice } = useContext(TotalPriceContext);
+
   function handleClick() {
     navigate("/all-tours");
   }
   // Check if user wants to leave payment form before paying
   const [isEntering, setIsEntered] = useState(false);
-  // const { totalPrice, basePrice } = useContext(TotalPriceProvider);
+
   const formFocusedHandler = () => {
     setIsEntered(true);
   };

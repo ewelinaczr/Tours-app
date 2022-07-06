@@ -1,5 +1,5 @@
 // import Nav from "../Nav";
-import styles from "./Buy.module.css";
+import styles from "./Buy.module.scss";
 import React from "react";
 
 function Buy(props) {

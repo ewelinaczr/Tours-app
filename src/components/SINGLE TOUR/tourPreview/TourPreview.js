@@ -15,11 +15,7 @@ import { TotalPriceContext } from "./../../../context/TotalPriceContext/TotalPri
 function TourPreview(props) {
   const params = useParams();
   const { setBasePrice, turistsNo, totalPrice } = useContext(TotalPriceContext);
-  // console.log(params.id);
-  // console.log(props.tour.photos);
-  // const ctx = useContext(LikeContext);
-  //Payment model
-  // console.log(props);
+
   const [cartIsShown, setCartShown] = useState(false);
 
   const showCartHandler = () => {

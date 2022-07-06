@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./LabelLastMinute.module.scss";
-// import DataBest from "./../BestsellerPreviewData";
 
 function LabelLastMinute() {
   return (

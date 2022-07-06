@@ -1,7 +1,6 @@
-import styles from "./Excursions.module.css";
+import styles from "./Excursions.module.scss";
 import Excursion from "./Excursion";
 import ExcursionsData from "../ExcursionsData";
-import SingleExcursionCreate from "./createSingleExcursion";
 
 function Executions(props) {
   return (
