@@ -5,7 +5,7 @@ import SingleReviewCreate from "./createSingleReview";
 
 function Reviews(props) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="reviews">
       {ReviewsData.map(SingleReviewCreate)}
     </div>
   );

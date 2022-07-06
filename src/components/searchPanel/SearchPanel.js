@@ -1,12 +1,15 @@
 import "./SearchPanel.css";
-import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { TotalPriceContext } from "./../../context/TotalPriceContext/TotalPriceContext";
 
 function SearchPanel(props) {
   const [destination, setDestination] = useState("");
   const [departure, setDeparture] = useState("");
   const [date, setDate] = useState("");
   const navigate = useNavigate();
+  const { turistsNo, setTuristsNo, increaseGuests, decreaseGuests } =
+    useContext(TotalPriceContext);
 
   // Duration increase/decrease
   const [countDuration, setCountDuration] = useState(10);
@@ -18,13 +21,14 @@ function SearchPanel(props) {
   };
 
   // Guests increase/decrease
-  const [countGuests, setCountGuests] = useState(1);
-  const increaseGuests = () => {
-    if (!(countGuests >= 8)) setCountGuests(countGuests + 1);
-  };
-  const decreaseGuests = () => {
-    if (!(countGuests <= 1)) setCountGuests(countGuests - 1);
-  };
+  // const [countGuests, setCountGuests] = useState(1);
+  // const increaseGuests = () => {
+  //   if (!(countGuests >= 8)) setCountGuests(countGuests + 1);
+  // };
+  // const decreaseGuests = () => {
+  //   if (!(countGuests <= 1)) setCountGuests(countGuests - 1);
+  // };
+  // setTuristsNo(countGuests);
 
   const departureHandler = (event) => {
     setDeparture(event.target.value);
@@ -49,7 +53,7 @@ function SearchPanel(props) {
       departure: departure,
       date: date,
       duration: countDuration,
-      guests: countGuests,
+      guests: turistsNo,
     };
 
     props.onSaveSearch(tourSearch);
@@ -108,7 +112,7 @@ function SearchPanel(props) {
         <div className="search-guests">
           <p className="search-info">Guests</p>
           <div className="search-count-flex">
-            <p className="search-count">{countGuests}</p>
+            <p className="search-count">{turistsNo}</p>
             <button onClick={increaseGuests} className="search-add">
               +
             </button>

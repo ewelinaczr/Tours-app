@@ -8,6 +8,7 @@ import Error from "./components/errorBoundaries/Error";
 import LoadingSpinner from "./components/loadingSpinner/LoadingSpinner";
 // CONTEXT
 import { LikeProvider } from "./context/LikeContext/LikeContext";
+import { TotalPriceProvider } from "./context/TotalPriceContext/TotalPriceContext";
 
 const LogIn = React.lazy(() => import("./components/logIn/LogIn.js"));
 const TourPreview = React.lazy(() =>
@@ -36,12 +37,14 @@ function App() {
         >
           <Nav />
           <LikeProvider>
-            <Routes>
-              <Route path="/login" element={<LogIn />} />
-              <Route path="/*" element={<AllTours />} />
-              <Route path="/all-tours/*" element={<AllTours />} />
-              <Route path="/single-tour/:id" element={<TourPreview />} />
-            </Routes>
+            <TotalPriceProvider>
+              <Routes>
+                <Route path="/login" element={<LogIn />} />
+                <Route path="/*" element={<AllTours />} />
+                <Route path="/all-tours/*" element={<AllTours />} />
+                <Route path="/single-tour/:id" element={<TourPreview />} />
+              </Routes>
+            </TotalPriceProvider>
           </LikeProvider>
         </Suspense>
       </Error>

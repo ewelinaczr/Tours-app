@@ -1,6 +1,6 @@
 // import Nav from "../Nav";
 import styles from "./TourPreview.module.scss";
-import React from "react";
+import React, { useContext } from "react";
 import Photos from "./../photos/Photos";
 import TitleInfo from "./../titleInfo/TitleInfo";
 import Info from "./../info/Info";
@@ -10,9 +10,11 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Data from "./../../TripPreviewData";
 // import { LikeContext } from "./../LikeContext/LikeContext";
+import { TotalPriceContext } from "./../../../context/TotalPriceContext/TotalPriceContext";
 
 function TourPreview(props) {
   const params = useParams();
+  const { setBasePrice, turistsNo, totalPrice } = useContext(TotalPriceContext);
   // console.log(params.id);
   // console.log(props.tour.photos);
   // const ctx = useContext(LikeContext);
@@ -29,7 +31,8 @@ function TourPreview(props) {
   // console.log(props.tour.id);
 
   const tour = Data.find((tour) => tour.id === params.id.slice(1, 2));
-  console.log(tour.id);
+  console.log();
+  setBasePrice(Number(tour.cost.slice(1, 4)));
 
   return (
     <>
@@ -47,8 +50,8 @@ function TourPreview(props) {
           <div className={styles.button}>
             <div className={styles.priceblock}>
               <div className={styles.price}>
-                <p>Total price for 4 turists:</p>
-                <p className={styles.totalprice}>US$ 2100</p>
+                <p>Total price for {turistsNo} turists:</p>
+                <p className={styles.totalprice}>US$ {totalPrice}</p>
               </div>
               <Buy onShowCart={showCartHandler}></Buy>
             </div>

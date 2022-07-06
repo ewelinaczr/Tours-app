@@ -5,19 +5,8 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 import DryCleaningIcon from "@mui/icons-material/DryCleaning";
 import KitchenIcon from "@mui/icons-material/Kitchen";
 import SmokeFreeIcon from "@mui/icons-material/SmokeFree";
-import { useContext, useState } from "react";
-import { TotalPriceContext } from "./../../../context/TotalPriceContext/TotalPriceContext";
 
 function HotelCard(props) {
-  const [selected, setSelected] = useState(false);
-  const { addPrices, prices, removePrices } = useContext(TotalPriceContext);
-
-  const addPriceHandler = () => {
-    setSelected((prSt) => !prSt);
-    if (selected) addPrices(props.price);
-    if (!selected) removePrices(props.price);
-  };
-
   return (
     <div className={styles.roomcard}>
       <div className={styles.carddetail2}>
@@ -40,11 +29,8 @@ function HotelCard(props) {
         </div>
       </div>
       <div className={styles.carddetail2}>
-        <div>{selected && <p className={styles.sellabel}>selected</p>}</div>
         <p className={styles.price}>US$ {props.price}</p>
-        <button onClick={addPriceHandler} className={styles.button}>
-          Select
-        </button>
+        <button className={styles.button}>Select</button>
       </div>
     </div>
   );

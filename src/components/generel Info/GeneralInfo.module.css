@@ -1,0 +1,15 @@
+.description {
+	font-size: 1.4rem;
+	text-align: justify;
+	text-justify: inter-word;
+}
+.container {
+	font-size: 1.6rem;
+	/* background-color: palevioletred; */
+	margin: 2rem;
+}
+
+span {
+	font-weight: 600;
+	font-size: 1.6rem;
+}
